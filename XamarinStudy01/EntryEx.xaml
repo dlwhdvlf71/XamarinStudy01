@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinStudy01.EntryEx"
+             BackgroundColor="LightGray">
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout Padding="30" Margin="10" Orientation="Vertical">
+
+            <Label Text="ID"></Label>
+            <Entry x:Name="eID" Keyboard="Text"></Entry>
+            
+            <Label Text="Name"></Label>
+            <Entry x:Name="eName" Keyboard="Default"></Entry>
+
+            <Label Text="Phone"></Label>
+            <Entry x:Name="ePhone" Keyboard="Telephone"></Entry>
+
+            <Label Text="Email"></Label>
+            <Entry x:Name="eMail" Keyboard="Email"></Entry>
+
+            <Label Text="Age"></Label>
+            <Entry x:Name="eAge" Keyboard="Numeric"></Entry>
+
+            <Label Text="몸무게"></Label>
+            <Entry x:Name="eWeight" Placeholder="0"></Entry>
+            <Slider 
+                x:Name="xWeight" 
+                Minimum="0" Maximum="1000"
+                ValueChanged="xWeight_ValueChanged" Margin="20">
+            </Slider>
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="IsEmail" HorizontalOptions="Start" VerticalOptions="Center"></Label>
+                <CheckBox x:Name="cbIsEmail" HorizontalOptions="EndAndExpand" IsChecked="True" CheckedChanged="cbIsEmail_CheckedChanged"></CheckBox>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="IsPhone" HorizontalOptions="Center"></Label>
+                <Switch x:Name="wsIsPhone" HorizontalOptions="EndAndExpand" IsToggled="True" Toggled="wsIsPhone_Toggled"></Switch>
+            </StackLayout>
+            
+            <Label Text="Comment"></Label>
+            <Editor x:Name="eComment"
+                    BackgroundColor="White" 
+                    FontAttributes="Bold" 
+                    Placeholder="Please input your Comment"
+                    VerticalOptions="FillAndExpand">
+            </Editor>
+
+            <Label Text="Image"></Label>
+            <Image x:Name="eImage" BackgroundColor="White" Opacity="1"></Image>
+            
+            <Button x:Name="BtnConfirm" Text="Confirm" Clicked="BtnConfirm_Clicked" BackgroundColor="Azure" Margin="30" TextTransform="None"></Button>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" >
+                    <Button x:Name="btAlert1" Text="Alert1" Clicked="Alert_Clicked" TextTransform="None"></Button>
+                    <Button x:Name="btAlert2" Text="Alert2" Clicked="Alert_Clicked" TextTransform="None"></Button>
+                    <Button x:Name="btAlert3" Text="Alert3" Clicked="Alert_Clicked" TextTransform="None"></Button>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                    <Button x:Name="btPropt1" Text="Propt1" Clicked="btPropt_Clicked" TextTransform="None"></Button>
+                    <Button x:Name="btPropt2" Text="Propt2" Clicked="btPropt_Clicked" TextTransform="None"></Button>
+                    <Button x:Name="btPropt3" Text="Propt3" Clicked="btPropt_Clicked" TextTransform="None"></Button>
+                </StackLayout>
+            
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
