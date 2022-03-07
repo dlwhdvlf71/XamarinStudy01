@@ -143,5 +143,42 @@ namespace XamarinStudy01
             }
 
         }
+
+        private void dtBirth_DateSelected(object sender, DateChangedEventArgs e)
+        {
+            try
+            {
+                var id = ((DatePicker)sender).Id;
+
+                DateTime dateTime = e.NewDate;
+
+                int year = dateTime.Year;
+                int month = dateTime.Month;
+                int day = dateTime.Day;
+
+                char[] days = { '일', '월', '화', '수', '목', '금', '토' };
+
+                char date = days[(int)dateTime.DayOfWeek];
+
+                lbDate.Text = $"{date}요일";
+
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+
+        private void BirthTime_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
+        {
+            var id = ((TimePicker)sender).Id;
+
+            Debug.WriteLine("id : ------------ " + id);
+
+            if(e.PropertyName == "Time")
+            {
+                lbDate.Text = BirthTime.Time.ToString();
+            }
+        }
     }
 }

@@ -7,6 +7,14 @@
         <ScrollView>
         <StackLayout Padding="30" Margin="10" Orientation="Vertical">
 
+                <Label Text="Birth"></Label>
+                <DatePicker x:Name="dtBirth" MinimumDate="2020/01/01" MaximumDate="2022-03-06" Date="2022-03-08" DateSelected="dtBirth_DateSelected">
+                </DatePicker>
+                <TimePicker x:Name="BirthTime" Time="12:23:45" Format="hh:mm:ss" TextTransform="None" PropertyChanged="BirthTime_PropertyChanged"></TimePicker>
+                <Label x:Name="lbDate"></Label>
+
+                
+            
             <Label Text="ID"></Label>
             <Entry x:Name="eID" Keyboard="Text"></Entry>
             
