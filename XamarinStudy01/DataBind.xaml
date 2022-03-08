@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinStudy01.DataBind">
+    <ContentPage.Content>
+        <StackLayout Padding="20" BackgroundColor="LightGray" BindingContext="{x:Reference xSlider04}">
+            
+            <Label x:Name="xLabel01" Text="Hello!" HorizontalOptions="Center" VerticalOptions="Center" />
+            <Label x:Name="xLabel02" Text="Xamarin" HorizontalOptions="Center" VerticalOptions="Center" />
+
+            <Slider x:Name="xSlider01" Maximum="40" Minimum="10" ValueChanged="xSlider_ValueChanged"></Slider>
+
+            
+            <Label x:Name="xLabel03" Text="Hello!" HorizontalOptions="Center" VerticalOptions="Center" Margin="0, 50, 0, 0" 
+                   BindingContext="{x:Reference xSlider02}" Padding="{Binding Path=Value}"/>
+            <Label x:Name="xLabel04" Text="Xamarin" HorizontalOptions="Center" VerticalOptions="Center" BindingContext="{x:Reference xSlider02}" FontSize="{Binding Path=Value}"></Label>
+
+            <Slider x:Name="xSlider02" Maximum="40" Minimum="10" />
+
+            
+            <Label x:Name="xLabel05" Text="Hello!" HorizontalOptions="Center" VerticalOptions="Center" Margin="0, 50, 0, 0" 
+                   Padding="{Binding Source={x:Reference xSlider03}, Path=Value}" />
+            <Label x:Name="xLabel06" Text="Xamarin" HorizontalOptions="Center" VerticalOptions="Center" 
+                   FontSize="{Binding Source={x:Reference xSlider03}, Path=Value}" />
+
+            <Slider x:Name="xSlider03" Maximum="40" Minimum="10" />
+
+
+            <Label x:Name="xLabel07" Text="Hello!" HorizontalOptions="Center" VerticalOptions="Center" Margin="0, 50, 0, 0" 
+                   Padding="{Binding Path=Value}" />
+            <Label x:Name="xLabel08" Text="Xamarin" HorizontalOptions="Center" VerticalOptions="Center" 
+                   FontSize="{Binding Path=Value}" />
+
+            <Slider x:Name="xSlider04" Maximum="40" Minimum="10" />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

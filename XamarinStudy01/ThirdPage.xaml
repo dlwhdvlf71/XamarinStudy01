@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinStudy01.ThirdPage">
+
+    <NavigationPage.TitleView>
+        <Label Text="Third Page" TextColor="Black" FontAttributes="Bold" Margin="0, 0, 20, 0" HorizontalOptions="End"></Label>
+    </NavigationPage.TitleView>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Welcome to Third Page!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+
+            <Button x:Name="btGoToMain" Text="Go to MainPage" VerticalOptions="EndAndExpand" Margin="20" Clicked="btn_Clicked"></Button>
+            <Button x:Name="btGoToSecond" Text="Go to SecondPage" VerticalOptions="EndAndExpand" Margin="20" Clicked="btn_Clicked"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

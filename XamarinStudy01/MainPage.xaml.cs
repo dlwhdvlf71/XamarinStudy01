@@ -14,5 +14,18 @@ namespace XamarinStudy01
         {
             InitializeComponent();
         }
+
+        private async void btGoToSecond_Clicked(object sender, EventArgs e)
+        {
+            try
+            {
+                await Navigation.PushAsync(new SecondPage());
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
     }
 }

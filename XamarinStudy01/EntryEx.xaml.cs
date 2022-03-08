@@ -131,10 +131,6 @@ namespace XamarinStudy01
 
                     Debug.WriteLine($"display2 : {result}");
                 }
-                else if( btPropt3.Id == id)
-                {
-
-                }
             }
             catch (Exception)
             {

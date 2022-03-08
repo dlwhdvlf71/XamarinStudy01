@@ -10,7 +10,9 @@ namespace XamarinStudy01
         {
             InitializeComponent();
 
-            MainPage = new EntryEx();
+            MainPage = new DataBind();
+            //MainPage = new NavigationPage(new MainPage()); // new MainPage();
+
         }
 
         protected override void OnStart()

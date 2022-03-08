@@ -70,7 +70,6 @@
                 <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
                     <Button x:Name="btPropt1" Text="Propt1" Clicked="btPropt_Clicked" TextTransform="None"></Button>
                     <Button x:Name="btPropt2" Text="Propt2" Clicked="btPropt_Clicked" TextTransform="None"></Button>
-                    <Button x:Name="btPropt3" Text="Propt3" Clicked="btPropt_Clicked" TextTransform="None"></Button>
                 </StackLayout>
             
         </StackLayout>
