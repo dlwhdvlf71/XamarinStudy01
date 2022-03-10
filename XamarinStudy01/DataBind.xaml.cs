@@ -17,6 +17,29 @@ namespace XamarinStudy01
             InitializeComponent();
 
             InitProperty();
+
+            xLabel09.BindingContext = xSlider05;
+            xLabel10.BindingContext = xSlider05;
+
+            xLabel09.SetBinding(Label.PaddingProperty, "Value");
+            xLabel10.SetBinding(Label.FontSizeProperty, "Value");
+
+
+            Binding binding1 = new Binding()
+            {
+                Source = xSlider06,
+                Path = "Value"
+            };
+
+            Binding binding2 = new Binding()
+            {
+                Source = xSlider06,
+                Path = "Value"
+            };
+
+            xLabel11.SetBinding(Label.PaddingProperty, binding1);
+            xLabel12.SetBinding(Label.FontSizeProperty, binding1);
+
         }
 
         private void xSlider_ValueChanged(object sender, ValueChangedEventArgs e)
