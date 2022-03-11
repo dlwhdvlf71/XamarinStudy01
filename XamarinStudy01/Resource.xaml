@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinStudy01.Resource"
+             xmlns:local="clr-namespace:XamarinStudy01"
+             Padding="20"
+             BackgroundColor="LightGray">
+    <ContentPage.Content>
+        
+        <StackLayout>
+            <Label x:Name="label01" Text="Label 01" HorizontalOptions="Center" 
+                   BackgroundColor="{x:Static local:ResourceClass.BackgroundColorBlue}"
+                   FontSize="{x:Static local:ResourceClass.FontSizeBig}"
+                   Padding="{x:Static local:ResourceClass.PaddingBig}"
+                   ></Label>
+
+            <Label x:Name="label02" Text="Label 02" HorizontalOptions="Center" 
+                   BackgroundColor="{x:Static local:ResourceClass.BackgroundColorRed}"
+                   FontSize="{x:Static local:ResourceClass.FontSizeNormal}"
+                   Padding="{x:Static local:ResourceClass.PaddingNormal}"
+                   ></Label>
+
+            <Label x:Name="label03" Text="Label 03" HorizontalOptions="Center" 
+                   BackgroundColor="{x:Static local:ResourceClass.BackgroundColorGreen}"
+                   FontSize="{x:Static local:ResourceClass.FontSizeSmall}"
+                   Padding="{x:Static local:ResourceClass.PaddingSmall}"
+                   ></Label>
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

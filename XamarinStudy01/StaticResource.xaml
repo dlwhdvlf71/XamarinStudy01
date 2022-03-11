@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinStudy01.StaticResource">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+
+            <Color x:Key="backgroundColorRed">#f00</Color>
+            <Color x:Key="backgroundColorGreen">#0f0</Color>
+            <Color x:Key="backgroundColorBlue">#00f</Color>
+
+            <x:Double x:Key="paddingBig">30</x:Double>
+            <x:Double x:Key="paddingNormal">20</x:Double>
+            <x:Double x:Key="paddingSmall">10</x:Double>
+            
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <StackLayout BackgroundColor="LightGray">
+        <Label x:Name="label01" BackgroundColor="{StaticResource Key=backgroundColorRed}" Padding="{StaticResource Key=paddingBig}" Text="Red"></Label>
+        <Label x:Name="label02" BackgroundColor="{StaticResource Key=backgroundColorGreen}" Padding="{StaticResource Key=paddingNormal}" Text="Green"></Label>
+        <Label x:Name="label03" BackgroundColor="{StaticResource Key=backgroundColorBlue}" Padding="{StaticResource Key=paddingSmall}" Text="Blue"></Label>
+        
+    </StackLayout>
+</ContentPage>

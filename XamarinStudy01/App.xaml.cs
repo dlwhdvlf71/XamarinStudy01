@@ -10,7 +10,7 @@ namespace XamarinStudy01
         {
             InitializeComponent();
 
-            MainPage = new DataBind();
+            MainPage = new Resource();
             //MainPage = new NavigationPage(new MainPage()); // new MainPage();
 
         }

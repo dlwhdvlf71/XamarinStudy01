@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinStudy01.DynamicResource"
+             Padding="10"
+             BackgroundColor="LightGray">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+
+            <Color x:Key="backgroundColorRed">#f00</Color>
+            <Color x:Key="backgroundColorGreen">#0f0</Color>
+            <Color x:Key="backgroundColorBlue">#00f</Color>
+
+            <x:Double x:Key="paddingBig">30</x:Double>
+            <x:Double x:Key="paddingNormal">20</x:Double>
+            <x:Double x:Key="paddingSmall">10</x:Double>
+
+            <x:Double x:Key="fontSizeBig">30</x:Double>
+            <x:Double x:Key="fontSizeNormal">20</x:Double>
+            <x:Double x:Key="fontSizeSmall">10</x:Double>
+            
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Label 
+                x:Name="labelTitle"
+                Text="Welcome to Xamarin.Forms!"
+                VerticalOptions="Center" 
+                HorizontalOptions="FillAndExpand"
+                BackgroundColor="{DynamicResource Key=backgroundColorBlue}"
+                TextColor="Black"
+                HorizontalTextAlignment="Center"
+                Padding="{DynamicResource Key=paddingBig}"
+                FontSize="{DynamicResource Key=fontSizeBig}"/>
+
+            <Label>Backgorund Color</Label>
+            <StackLayout Orientation="Horizontal">
+
+                <Button x:Name="ChangedColorRed" Text="Red" HorizontalOptions="FillAndExpand" Clicked="btn_Clicked"></Button>
+                <Button x:Name="ChangedColorGreen" Text="Green" HorizontalOptions="FillAndExpand" Clicked="btn_Clicked"></Button>
+                <Button x:Name="ChangedColorBlue" Text="Blue" HorizontalOptions="FillAndExpand" Clicked="btn_Clicked"></Button>
+
+            </StackLayout>
+
+            <Label>Padding</Label>
+            <StackLayout Orientation="Horizontal">
+
+                <Button x:Name="ChangedPaddingBig" Text="Big" HorizontalOptions="FillAndExpand" Clicked="btn_Clicked"></Button>
+                <Button x:Name="ChangedPaddingNormal" Text="Normal" HorizontalOptions="FillAndExpand" Clicked="btn_Clicked"></Button>
+                <Button x:Name="ChangedPaddingSmall" Text="Small" HorizontalOptions="FillAndExpand" Clicked="btn_Clicked"></Button>
+
+            </StackLayout>
+
+            <Label>FontSize</Label>
+            <StackLayout Orientation="Horizontal">
+
+                <Button x:Name="ChangedFontSizeBig" Text="Big" HorizontalOptions="FillAndExpand" Clicked="btn_Clicked"></Button>
+                <Button x:Name="ChangedFontSizeNormal" Text="Normal" HorizontalOptions="FillAndExpand" Clicked="btn_Clicked"></Button>
+                <Button x:Name="ChangedFontSizeSmall" Text="Small" HorizontalOptions="FillAndExpand" Clicked="btn_Clicked"></Button>
+
+            </StackLayout>
+
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>
