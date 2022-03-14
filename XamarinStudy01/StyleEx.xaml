@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinStudy01.StyleEx">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+
+            <Style x:Key="mainTitleStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="#fff"></Setter>
+                <Setter Property="FontSize" Value="30"></Setter>
+                <Setter Property="FontAttributes" Value="Bold"></Setter>
+                <Setter Property="Padding" Value="5"></Setter>
+                <Setter Property="BackgroundColor" Value="Red"></Setter>
+                <Setter Property="HorizontalTextAlignment" Value="End"></Setter>
+            </Style>
+
+            <Style x:Key="subTitleStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="#fff"></Setter>
+                <Setter Property="FontSize" Value="20"></Setter>
+                <Setter Property="FontAttributes" Value="Bold"></Setter>
+                <Setter Property="Padding" Value="5, 5, 20, 5"></Setter>
+                <Setter Property="BackgroundColor" Value="#900"></Setter>
+                <Setter Property="HorizontalTextAlignment" Value="End"></Setter>
+            </Style>
+
+            <Style x:Key="subArticleStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="#fff"></Setter>
+                <Setter Property="FontSize" Value="20"></Setter>
+                <Setter Property="FontAttributes" Value="None"></Setter>
+                <Setter Property="Padding" Value="5, 5, 30, 5"></Setter>
+                <Setter Property="BackgroundColor" Value="#500"></Setter>
+                <Setter Property="HorizontalTextAlignment" Value="End"></Setter>
+            </Style>
+
+            <Style x:Key="moreButtonStyle" TargetType="Button">
+                <Setter Property="FontAttributes" Value="Bold"></Setter>
+                <Setter Property="BackgroundColor" Value="Blue"></Setter>
+                <Setter Property="HorizontalOptions" Value="End"></Setter>
+                <Setter Property="TextColor" Value="White"></Setter>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="lbMainTitle" Text="Xamarin.Forms!" Style="{StaticResource mainTitleStyle}"  />
+            <Label x:Name="lbSubTitle" Text="Xamarin.Forms!" Style="{StaticResource subTitleStyle}" />
+            <Label x:Name="lbArticle" Text="Xamarin.Forms!" Style="{StaticResource subArticleStyle}" />
+            <Button x:Name="btMore" Text="More" Style="{StaticResource moreButtonStyle}"></Button>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

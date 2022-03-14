@@ -10,7 +10,7 @@ namespace XamarinStudy01
         {
             InitializeComponent();
 
-            MainPage = new Resource();
+            MainPage = new StyleEx();
             //MainPage = new NavigationPage(new MainPage()); // new MainPage();
 
         }
