@@ -11,7 +11,7 @@
                 <Setter Property="FontAttributes" Value="Bold"></Setter>
                 <Setter Property="Padding" Value="5"></Setter>
                 <Setter Property="BackgroundColor" Value="Red"></Setter>
-                <Setter Property="HorizontalTextAlignment" Value="End"></Setter>
+                <!--<Setter Property="HorizontalTextAlignment" Value="End"></Setter>-->
             </Style>
 
             <Style x:Key="subTitleStyle" TargetType="Label">
@@ -20,7 +20,7 @@
                 <Setter Property="FontAttributes" Value="Bold"></Setter>
                 <Setter Property="Padding" Value="5, 5, 20, 5"></Setter>
                 <Setter Property="BackgroundColor" Value="#900"></Setter>
-                <Setter Property="HorizontalTextAlignment" Value="End"></Setter>
+                <!--<Setter Property="HorizontalTextAlignment" Value="End"></Setter>-->
             </Style>
 
             <Style x:Key="subArticleStyle" TargetType="Label">
@@ -29,25 +29,55 @@
                 <Setter Property="FontAttributes" Value="None"></Setter>
                 <Setter Property="Padding" Value="5, 5, 30, 5"></Setter>
                 <Setter Property="BackgroundColor" Value="#500"></Setter>
-                <Setter Property="HorizontalTextAlignment" Value="End"></Setter>
+                <!--<Setter Property="HorizontalTextAlignment" Value="End"></Setter>-->
             </Style>
 
             <Style x:Key="moreButtonStyle" TargetType="Button">
                 <Setter Property="FontAttributes" Value="Bold"></Setter>
                 <Setter Property="BackgroundColor" Value="Blue"></Setter>
-                <Setter Property="HorizontalOptions" Value="End"></Setter>
+                <Setter Property="HorizontalOptions" Value="Start"></Setter>
                 <Setter Property="TextColor" Value="White"></Setter>
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
     
     <ContentPage.Content>
-        <StackLayout>
-            <Label x:Name="lbMainTitle" Text="Xamarin.Forms!" Style="{StaticResource mainTitleStyle}"  />
-            <Label x:Name="lbSubTitle" Text="Xamarin.Forms!" Style="{StaticResource subTitleStyle}" />
-            <Label x:Name="lbArticle" Text="Xamarin.Forms!" Style="{StaticResource subArticleStyle}" />
-            <Button x:Name="btMore" Text="More" Style="{StaticResource moreButtonStyle}"></Button>
+        <ScrollView>
             
-        </StackLayout>
+            
+        
+        <StackLayout x:Name="mainStackLayout">
+                <StackLayout.Resources>
+                    <ResourceDictionary>
+
+                        <Style x:Key="mainTitleEndStyle" TargetType="Label" BasedOn="{StaticResource mainTitleStyle}">
+                            <Setter Property="HorizontalTextAlignment" Value="End"></Setter>
+                        </Style>
+                        <Style x:Key="mainSubEndStyle" TargetType="Label" BasedOn="{StaticResource subTitleStyle}">
+                            <Setter Property="HorizontalTextAlignment" Value="End"></Setter>
+                        </Style>
+                        <Style x:Key="mainArticleEndStyle" TargetType="Label" BasedOn="{StaticResource subArticleStyle}">
+                            <Setter Property="HorizontalTextAlignment" Value="End"></Setter>
+                        </Style>
+                        <Style x:Key="moreButtonEndStyle" TargetType="Button" BasedOn="{StaticResource moreButtonStyle}">
+                            <Setter Property="HorizontalOptions" Value="End"></Setter>
+                        </Style>
+                        
+                    </ResourceDictionary>
+                </StackLayout.Resources>
+            
+            
+            <Label x:Name="lbMainTitle01" Text="Xamarin.Forms!" Style="{StaticResource mainTitleStyle}"  />
+            <Label x:Name="lbSubTitle01" Text="Xamarin.Forms!" Style="{StaticResource subTitleStyle}" />
+            <Label x:Name="lbArticle01" Text="Xamarin.Forms!" Style="{StaticResource subArticleStyle}" />
+            <Button x:Name="btMore01" Text="More" Style="{StaticResource moreButtonStyle}"></Button>
+
+                <Label x:Name="lbMainTitle02" Text="Xamarin.Forms!" Style="{StaticResource mainTitleEndStyle}"  />
+                <Label x:Name="lbSubTitle02" Text="Xamarin.Forms!" Style="{StaticResource mainSubEndStyle}" />
+                <Label x:Name="lbArticle02" Text="Xamarin.Forms!" Style="{StaticResource mainArticleEndStyle}" />
+                <Button x:Name="btMore02" Text="More" Style="{StaticResource moreButtonEndStyle}"></Button>
+
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
