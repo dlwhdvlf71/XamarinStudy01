@@ -10,7 +10,7 @@ namespace XamarinStudy01
         {
             InitializeComponent();
 
-            MainPage = new StyleEx();
+            MainPage = new StyleDynamic();
             //MainPage = new NavigationPage(new MainPage()); // new MainPage();
 
         }

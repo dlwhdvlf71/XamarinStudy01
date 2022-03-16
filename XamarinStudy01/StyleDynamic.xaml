@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinStudy01.StyleDynamic">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+
+            <Style x:Key="baseStyle" TargetType="View">
+                <Setter Property="VerticalOptions" Value="EndAndExpand"></Setter>
+            </Style>
+
+            <Style x:Key="blueSearchBarStyle" TargetType="SearchBar" BasedOn="{StaticResource baseStyle}">
+                <Setter Property="FontAttributes" Value="Italic"></Setter>
+                <Setter Property="PlaceholderColor" Value="Blue"></Setter>
+            </Style>
+
+            <Style x:Key="greenSearchBarStyle" TargetType="SearchBar">
+                <Setter Property="FontAttributes" Value="None"></Setter>
+                <Setter Property="PlaceholderColor" Value="Green"></Setter>
+            </Style>
+
+            <Style x:Key="btnStyle" TargetType="Button" BasedOn="{StaticResource baseStyle}">
+                <Setter Property="FontSize" Value="Large"></Setter>
+                <Setter Property="TextColor" Value="Red"></Setter>
+            </Style>
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+        <StackLayout Padding="0, 20, 0, 0">
+
+            <SearchBar Placeholder="Name" Style="{DynamicResource searchBarStyle}"></SearchBar>
+            <SearchBar Placeholder="Address" Style="{DynamicResource searchBarStyle}"></SearchBar>
+            <SearchBar Placeholder="Address Details" Style="{DynamicResource searchBarStyle}"></SearchBar>
+            <SearchBar Placeholder="Age" Style="{StaticResource blueSearchBarStyle}"></SearchBar>
+            
+            <Button Text="Change Style" Clicked="btn_Clicked" Style="{StaticResource btnStyle}"></Button>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
