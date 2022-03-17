@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinStudy01.MVVMDataBindingEx"
+             xmlns:local="clr-namespace:XamarinStudy01">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <StackLayout.Resources>
+                <ResourceDictionary>
+
+                    <local:CurrentTimeViewModel x:Key="currentTimeViewModel"></local:CurrentTimeViewModel> 
+                    
+                </ResourceDictionary>
+            </StackLayout.Resources>
+            
+            <StackLayout>
+                <Label Text="{Binding Source={StaticResource currentTimeViewModel}, Path=DateTime}" HorizontalTextAlignment="Center" FontSize="30"></Label>
+
+                <Label Text="{Binding Source={StaticResource currentTimeViewModel}, Path=DateTime.Year, StringFormat='The year is {0}'}" HorizontalTextAlignment="Center" FontSize="30"></Label>
+
+                <Label Text="{Binding Source={StaticResource currentTimeViewModel}, Path=DateTime, StringFormat='The year is {0:MMMM}'}" HorizontalTextAlignment="Center" FontSize="30"></Label>
+
+                <Label Text="{Binding Source={StaticResource currentTimeViewModel}, Path=DateTime.Day, StringFormat='The year is {0}'}" HorizontalTextAlignment="Center" FontSize="30"></Label>
+
+                <Label Text="{Binding Source={StaticResource currentTimeViewModel}, Path=DateTime, StringFormat='The year is {0: hh:mm:ss}'}" HorizontalTextAlignment="Center" FontSize="30"></Label>
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -10,7 +10,7 @@ namespace XamarinStudy01
         {
             InitializeComponent();
 
-            MainPage = new StyleDynamic();
+            MainPage = new MVVMDataBindingEx();
             //MainPage = new NavigationPage(new MainPage()); // new MainPage();
 
         }

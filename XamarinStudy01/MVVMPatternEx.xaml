@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinStudy01.MVVMPatternEx"
+             Padding="20">
+
+    <StackLayout>
+
+        <StackLayout>
+            <Label x:Name="lbDateTime" HorizontalTextAlignment="Center" FontSize="30"></Label>
+            
+            <Label x:Name="lbYear" HorizontalTextAlignment="Center" FontSize="30"></Label>
+
+            <Label x:Name="lbMonth" HorizontalTextAlignment="Center" FontSize="30"></Label>
+
+            <Label x:Name="lbDay" HorizontalTextAlignment="Center" FontSize="30"></Label>
+
+            <Label x:Name="lbTime" HorizontalTextAlignment="Center" FontSize="30"></Label>
+        </StackLayout>
+        
+    </StackLayout>
+</ContentPage>
