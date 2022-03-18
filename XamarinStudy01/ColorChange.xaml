@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinStudy01.ColorChange"
+             Padding="20"
+             BackgroundColor="#777"
+             xmlns:local="clr-namespace:XamarinStudy01">
+
+
+    <ContentPage.BindingContext>
+        <local:ColorChangeViewModel CurrentColor="Purple"></local:ColorChangeViewModel>
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Content>
+        <StackLayout>
+
+            <BoxView Color="{Binding CurrentColor}" VerticalOptions="FillAndExpand" ></BoxView>
+
+            <Label Text="{Binding Hue, StringFormat='Hue : {0:F2}'}" HorizontalOptions="Center"></Label>
+            <Slider Value="{Binding Hue, Mode=TwoWay}"></Slider>
+
+            <Label Text="{Binding Saturation, StringFormat='Saturation : {0:F2}'}" HorizontalOptions="Center"></Label>
+            <Slider Value="{Binding Saturation, Mode=TwoWay}"></Slider>
+
+            <Label Text="{Binding Luminosity, StringFormat='Luminosity : {0:F2}'}" HorizontalOptions="Center"></Label>
+            <Slider Value="{Binding Luminosity, Mode=TwoWay}"></Slider>
+
+            <Label Text="{Binding Alphy, StringFormat='Alphy : {0:F2}'}" HorizontalOptions="Center"></Label>
+            <Slider Value="{Binding Alphy, Mode=TwoWay}"></Slider>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
