@@ -10,7 +10,7 @@ namespace XamarinStudy01
         {
             InitializeComponent();
 
-            MainPage = new Resource();
+            MainPage = new TemperatureController();
             //MainPage = new NavigationPage(new MainPage()); // new MainPage();
 
         }

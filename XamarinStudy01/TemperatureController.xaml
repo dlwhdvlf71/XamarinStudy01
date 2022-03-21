@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:XamarinStudy01"
+             x:Class="XamarinStudy01.TemperatureController"
+             BackgroundColor="LightGray"
+             Padding="20">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:TemperatureViewModel x:Key="temperatureViewModel"></local:TemperatureViewModel>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+
+        <StackLayout BindingContext="{StaticResource temperatureViewModel}">
+            
+            <StackLayout Margin="5, 30, 0, 0">
+                <Label Text="Device #01: Enter the temperature you want" FontAttributes="Bold" TextColor="Black"/>
+            </StackLayout>
+            
+            <StackLayout Orientation="Horizontal">
+                <Button Text="-" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="FillAndExpand" TextColor="Black" Command="{Binding Path=DecreaseCommandForDevice01Temp}"></Button>
+                <Label Text="{Binding Path= Device01Temp}" TextColor="#f00" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalOptions="Center" HorizontalOptions="FillAndExpand" FontSize="20" BackgroundColor="White" ></Label>
+                <Button Text="+" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="FillAndExpand" TextColor="Black" Command="{Binding Path=IncreaseCommandForDevice01Temp}"></Button>
+                <Button Text="ENTER" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="FillAndExpand" TextColor="Black"></Button>
+            </StackLayout>
+
+            <StackLayout Margin="5, 30, 0, 0">
+                <Label Text="Device #02: Enter the temperature you want" FontAttributes="Bold" TextColor="Black"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Button Text="-" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="FillAndExpand" TextColor="Black"></Button>
+                <Label Text="{Binding Path= Device02Temp}" TextColor="#f00" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalOptions="Center" HorizontalOptions="FillAndExpand" FontSize="20" BackgroundColor="White" ></Label>
+                <Button Text="+" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="FillAndExpand" TextColor="Black"></Button>
+                <Button Text="ENTER" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="FillAndExpand" TextColor="Black"></Button>
+            </StackLayout>
+
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>
