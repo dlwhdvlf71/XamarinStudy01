@@ -8,7 +8,8 @@
 
     <ContentPage.Resources>
         <ResourceDictionary>
-            <local:TemperatureViewModel x:Key="temperatureViewModel"></local:TemperatureViewModel>
+
+            <local:TemperatureViewModel x:Key="temperatureViewModel"/>
         </ResourceDictionary>
     </ContentPage.Resources>
     
@@ -22,7 +23,7 @@
             
             <StackLayout Orientation="Horizontal">
                 <Button Text="-" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="FillAndExpand" TextColor="Black" Command="{Binding Path=DecreaseCommandForDevice01Temp}"></Button>
-                <Label Text="{Binding Path= Device01Temp}" TextColor="#f00" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalOptions="Center" HorizontalOptions="FillAndExpand" FontSize="20" BackgroundColor="White" ></Label>
+                <Label Text="{Binding Path= Device01Temp}" TextColor="{Binding Device01Color}" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalOptions="Center" HorizontalOptions="FillAndExpand" FontSize="20" BackgroundColor="White" ></Label>
                 <Button Text="+" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="FillAndExpand" TextColor="Black" Command="{Binding Path=IncreaseCommandForDevice01Temp}"></Button>
                 <Button Text="ENTER" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="FillAndExpand" TextColor="Black"></Button>
             </StackLayout>
@@ -32,9 +33,9 @@
             </StackLayout>
 
             <StackLayout Orientation="Horizontal">
-                <Button Text="-" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="FillAndExpand" TextColor="Black"></Button>
-                <Label Text="{Binding Path= Device02Temp}" TextColor="#f00" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalOptions="Center" HorizontalOptions="FillAndExpand" FontSize="20" BackgroundColor="White" ></Label>
-                <Button Text="+" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="FillAndExpand" TextColor="Black"></Button>
+                <Button Text="-" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="FillAndExpand" TextColor="Black" Command="{Binding DecreaseCommandForDevice02Temp}"></Button>
+                <Label Text="{Binding Path= Device02Temp}" TextColor="{Binding Device02Color}" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalOptions="Center" HorizontalOptions="FillAndExpand" FontSize="20" BackgroundColor="White" ></Label>
+                <Button Text="+" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="FillAndExpand" TextColor="Black" Command="{Binding IncreaseCommandForDevice02Temp}"></Button>
                 <Button Text="ENTER" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="FillAndExpand" TextColor="Black"></Button>
             </StackLayout>
 
