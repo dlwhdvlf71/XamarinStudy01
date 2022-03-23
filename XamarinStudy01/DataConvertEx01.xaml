@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:XamarinStudy01"
+             x:Class="XamarinStudy01.DataConvertEx01"
+             Padding="20">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:IntToBoolConverter x:Key="intToBoolConverter"></local:IntToBoolConverter>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+
+        <StackLayout>
+
+            <StackLayout>
+
+                <Entry x:Name="entry01" Placeholder="First Entry" Text=""></Entry>
+                <Button Text="SEARCH" FontAttributes="Bold" BackgroundColor="LightGray" IsEnabled="{Binding Source={x:Reference entry01}, Path=Text.Length, Converter={StaticResource intToBoolConverter}}"></Button>
+
+            </StackLayout>
+
+            <StackLayout>
+                <Entry x:Name="entry02" Placeholder="Second Entry" Text=""></Entry>
+                <Button Text="submit" FontAttributes="Bold" BackgroundColor="LightGray" IsEnabled="{Binding Source={x:Reference entry02}, Path=Text.Length, Converter={StaticResource intToBoolConverter}}"></Button>
+            </StackLayout>
+
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>
