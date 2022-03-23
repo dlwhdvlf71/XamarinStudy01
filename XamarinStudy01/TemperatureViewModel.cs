@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.Windows.Input;
 using Xamarin.Forms;
-using System.Diagnostics;
 
 namespace XamarinStudy01
 {
@@ -12,8 +8,8 @@ namespace XamarinStudy01
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-        double device01Temp, device02Temp;
-        Color device01Color, device02Color;
+        private double device01Temp, device02Temp;
+        private Color device01Color, device02Color;
 
         public ICommand IncreaseCommandForDevice01Temp { get; private set; }
         public ICommand DecreaseCommandForDevice01Temp { get; private set; }
@@ -78,7 +74,7 @@ namespace XamarinStudy01
             Device02Temp = 28;
         }
 
-        public double Device01Temp 
+        public double Device01Temp
         {
             get
             {
@@ -87,7 +83,7 @@ namespace XamarinStudy01
 
             set
             {
-                if(this.device01Temp != value)
+                if (this.device01Temp != value)
                 {
                     this.device01Temp = value;
                     OnPropertyChanged("Device01Temp");
@@ -120,13 +116,12 @@ namespace XamarinStudy01
 
             set
             {
-                if(this.device01Color != value)
+                if (this.device01Color != value)
                 {
                     this.device01Color = value;
                     OnPropertyChanged("Device01Color");
                 }
             }
-
         }
 
         public double Device02Temp
@@ -166,14 +161,14 @@ namespace XamarinStudy01
         {
             get
             {
-                return this.Device02Color;
+                return this.device02Color;
             }
 
             set
             {
-                if(this.Device02Color != value)
+                if (this.device02Color != value)
                 {
-                    this.Device02Color = value;
+                    this.device02Color = value;
                     OnPropertyChanged("Device02Color");
                 }
             }
@@ -181,11 +176,10 @@ namespace XamarinStudy01
 
         private void OnPropertyChanged(string propertyName)
         {
-            if(PropertyChanged != null)
+            if (PropertyChanged != null)
             {
                 PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
             }
         }
-
     }
 }

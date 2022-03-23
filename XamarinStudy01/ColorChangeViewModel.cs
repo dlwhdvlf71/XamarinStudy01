@@ -90,8 +90,6 @@ namespace XamarinStudy01
         {
             set
             {
-                Debug.WriteLine("CurrentColor");
-
                 if (this.currentColor != value)
                 {
                     this.currentColor = value;
