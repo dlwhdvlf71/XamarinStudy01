@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:XamarinStudy01"
+             x:Class="XamarinStudy01.DataConverterEx02"
+             Padding="20">
+
+ 
+    
+    <ContentPage.Content>
+        <StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Subscribe?"></Label>
+                <Switch x:Name="switch01" ></Switch>
+                <Label>
+                    <Label.Text>
+                        <Binding Source="{x:Reference switch01}" Path="IsToggled">
+                            <Binding.Converter>
+                                <local:BoolToObjectConverter x:TypeArguments="x:String" TrueObject="Of Course" FalseObject="No Way!"></local:BoolToObjectConverter>
+                            </Binding.Converter>
+                        </Binding>
+                    </Label.Text>
+                </Label>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Allow popups?"></Label>
+                <Switch x:Name="switch02"></Switch>
+                <Label>
+                    <Label.Text>
+                        <Binding Source="{x:Reference switch02}" Path="IsToggled">
+                            <Binding.Converter>
+                                <local:BoolToObjectConverter x:TypeArguments="x:String" TrueObject="Yes" FalseObject="No"></local:BoolToObjectConverter>
+                            </Binding.Converter>
+                        </Binding>
+                    </Label.Text>
+                    <Label.TextColor>
+                        <Binding Source="{x:Reference switch02}" Path="IsToggled">
+                            <Binding.Converter>
+                                <local:BoolToObjectConverter x:TypeArguments="Color" TrueObject="Red" FalseObject="Blue"></local:BoolToObjectConverter>
+                            </Binding.Converter>
+                        </Binding>
+                    </Label.TextColor>
+                </Label>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="End">
+                <Label>
+                    <Label.Text>
+                        <Binding Source="{x:Reference modeSwitch}" Path="IsToggled">
+                            <Binding.Converter>
+                                <local:BoolToObjectConverter x:TypeArguments="x:String" TrueObject="Night Mode" FalseObject="Light Mode"></local:BoolToObjectConverter>
+                            </Binding.Converter>
+                        </Binding>
+                    </Label.Text>
+                </Label>
+                <Switch x:Name="modeSwitch"></Switch>
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="데이터 바인딩은 일반적으로 원본 속성에서 대상 속성으로, 일부 경우에는 대상 속성에서 원본 속성으로 데이터를 전송합니다. 이 전송은 원본 및 대상 속성이 동일한 형식인 경우 또는 하나의 형식을 암시적 변환을 통해 다른 형식으로 변환할 수 있는 경우에 간단합니다. 그렇지 않은 경우 형식 변환을 수행해야 합니다.
+
+문자열 서식 지정 문서에서 데이터 바인딩의 속성을 사용하여 형식을 문자열로 변환하는 방법을 살펴보았습니다. 다른 형식의 변환의 경우 IValueConverter 인터페이스를 구현하는 클래스에 일부 특수한 코드를 작성해야 합니다. (유니버설 Windows 플랫폼은 네임스페이스에 IValueConverterWindows.UI.Xaml.Data라는 유사한 클래스를 포함하지만 이 IValueConverter는 Xamarin.Forms 네임스페이스에 있습니다.) IValueConverter를 구현하는 클래스는 IValueConverter라고 하지만 종종 바인딩 변환기 또는 바인딩 값 변환기라고도 합니다.">
+
+                    <Label.TextColor>
+                        <Binding Source="{x:Reference modeSwitch}" Path="IsToggled">
+                            <Binding.Converter>
+                                <local:BoolToObjectConverter x:TypeArguments="Color" TrueObject="White" FalseObject="Black"></local:BoolToObjectConverter>
+                            </Binding.Converter>
+                        </Binding>
+                    </Label.TextColor>
+
+                    <Label.BackgroundColor>
+                        <Binding Source="{x:Reference modeSwitch}" Path="IsToggled">
+                            <Binding.Converter>
+                                <local:BoolToObjectConverter x:TypeArguments="Color" TrueObject="Black" FalseObject="White"></local:BoolToObjectConverter>
+                            </Binding.Converter>
+                        </Binding>
+                    </Label.BackgroundColor>
+
+                </Label>
+            </StackLayout>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
