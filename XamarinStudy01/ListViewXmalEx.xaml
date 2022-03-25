@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinStudy01.ListViewXmalEx"
+             Padding="15">
+    <ContentPage.Content>
+        
+        <StackLayout>
+
+            <ListView ItemTapped="ListView_ItemTapped" ItemSelected="ListView_ItemSelected">
+                <ListView.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>c#</x:String>
+                        <x:String>c++</x:String>
+                        <x:String>ASP .Net</x:String>
+                        <x:String>Xamarin</x:String>
+                        <x:String>.Net Core</x:String>
+                        <x:String>Java</x:String>
+                        <x:String>Node</x:String>
+                        <x:String>c</x:String>
+                        <x:String>UWP</x:String>
+                        <x:String>IOS</x:String>
+                        <x:String>Android</x:String>
+                        <x:String>c#</x:String>
+                        <x:String>c++</x:String>
+                        <x:String>ASP .Net</x:String>
+                        <x:String>Xamarin</x:String>
+                        <x:String>.Net Core</x:String>
+                        <x:String>Java</x:String>
+                        <x:String>Node</x:String>
+                        <x:String>c</x:String>
+                        <x:String>UWP</x:String>
+                        <x:String>IOS</x:String>
+                        <x:String>Android</x:String>
+                        <x:String>c#</x:String>
+                        <x:String>c++</x:String>
+                        <x:String>ASP .Net</x:String>
+                        <x:String>Xamarin</x:String>
+                        <x:String>.Net Core</x:String>
+                        <x:String>Java</x:String>
+                        <x:String>Node</x:String>
+                        <x:String>c</x:String>
+                        <x:String>UWP</x:String>
+                        <x:String>IOS</x:String>
+                        <x:String>Android</x:String>
+                        <x:String>c#</x:String>
+                        <x:String>c++</x:String>
+                        <x:String>ASP .Net</x:String>
+                        <x:String>Xamarin</x:String>
+                        <x:String>.Net Core</x:String>
+                        <x:String>Java</x:String>
+                        <x:String>Node</x:String>
+                        <x:String>c</x:String>
+                        <x:String>UWP</x:String>
+                        <x:String>IOS</x:String>
+                        <x:String>Android</x:String>
+                        <x:String>c#</x:String>
+                        <x:String>c++</x:String>
+                        <x:String>ASP .Net</x:String>
+                        <x:String>Xamarin</x:String>
+                        <x:String>.Net Core</x:String>
+                        <x:String>Java</x:String>
+                        <x:String>Node</x:String>
+                        <x:String>c</x:String>
+                        <x:String>UWP</x:String>
+                        <x:String>IOS</x:String>
+                        <x:String>Android</x:String>
+                    </x:Array>
+                </ListView.ItemsSource>
+            </ListView>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

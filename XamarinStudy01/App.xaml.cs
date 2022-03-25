@@ -10,7 +10,7 @@ namespace XamarinStudy01
         {
             InitializeComponent();
 
-            MainPage = new DataConverterEx02();
+            MainPage = new ListViewXmalEx();
             //MainPage = new NavigationPage(new MainPage()); // new MainPage();
 
         }
