@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinStudy01.ListViewDataBinding"
+             Padding="20">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <StackLayout x:Name="sl01">
+                <ListView x:Name="list01" SelectedItem="{Binding Source={x:Reference sl01}, Path=BackgroundColor, Mode=TwoWay}">
+                    <ListView.ItemsSource>
+                        <x:Array Type="{Type Color}">
+                            <Color>#f00</Color>
+                            <Color>#0f0</Color>
+                            <Color>#00f</Color>
+                            <Color>#000</Color>
+                            <Color>#fff</Color>
+                            <Color>#ff0</Color>
+                            <Color>#0ff</Color>
+                        </x:Array>
+                    </ListView.ItemsSource>
+                </ListView>
+            </StackLayout>
+
+            
+
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>
