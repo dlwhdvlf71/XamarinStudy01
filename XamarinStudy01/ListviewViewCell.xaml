@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:XamarinStudy01"
+             x:Class="XamarinStudy01.ListviewViewCell"
+             Padding="20">
+
+    <ContentPage.BindingContext>
+        <local:StudentViewModel></local:StudentViewModel>
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView ItemsSource="{Binding Students}" ItemTapped="ListView_ItemTapped" ItemSelected="ListView_ItemSelected" RowHeight="70">
+                
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Vertical" Padding="10">
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding Id, StringFormat='ID : {0}'}" FontAttributes="Bold" FontSize="15"></Label>
+                                    <Label Text="{Binding Name, StringFormat='Name : {0}'}" FontAttributes="Bold" FontSize="15"></Label>
+                                    <Label Text="{Binding Major, StringFormat='Major : {0}'}" FontAttributes="Bold" FontSize="15"></Label>
+                                </StackLayout>
+
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding Gender, StringFormat='Gender : {0}'}"></Label>
+                                    <Label Text="{Binding Grade, StringFormat='Grade : {0}'}"></Label>
+                                    <Label Text="{Binding Age, StringFormat='Age : {0}'}"></Label>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>    
+                </ListView.ItemTemplate>
+                
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

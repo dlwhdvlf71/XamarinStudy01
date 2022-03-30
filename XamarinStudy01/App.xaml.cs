@@ -10,7 +10,7 @@ namespace XamarinStudy01
         {
             InitializeComponent();
 
-            MainPage = new ListviewObservalEx01();
+            MainPage = new ListviewViewCell();
             //MainPage = new NavigationPage(new MainPage()); // new MainPage();
 
         }
