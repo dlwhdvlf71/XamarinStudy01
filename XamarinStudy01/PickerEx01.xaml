@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinStudy01.PickerEx01"
+             Padding="15">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <StackLayout Orientation="Horizontal" BackgroundColor="LightGray" Padding="7">
+                <Label Text="Please Select a Grade." FontSize="20" FontAttributes="Bold" Padding="0, 10, 0, 0"></Label>
+                <Picker x:Name="pickerGrade" Title="Select" TitleColor="White" HorizontalOptions="EndAndExpand" SelectedIndexChanged="picker_SelectedIndexChanged" HorizontalTextAlignment="Center"
+                        TextColor="Red" FontAttributes="Bold">
+                    <Picker.Items>
+                        <x:String>1</x:String>
+                        <x:String>2</x:String>
+                        <x:String>3</x:String>
+                        <x:String>4</x:String>
+                        <x:String>5</x:String>
+                        <x:String>6</x:String>
+                    </Picker.Items>
+                </Picker>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" BackgroundColor="LightGray" Padding="7">
+                <Label Text="Please Select a Major." FontSize="20" FontAttributes="Bold" Padding="0, 10, 0, 0"></Label>
+                <Picker x:Name="pickerMajor" Title="Select" TitleColor="White" HorizontalOptions="EndAndExpand" SelectedIndexChanged="picker_SelectedIndexChanged"
+                        TextColor="Red" FontAttributes="Bold" WidthRequest="130" HorizontalTextAlignment="Center">
+                    <Picker.Items>
+                        <x:String>Korean</x:String>
+                        <x:String>English</x:String>
+                        <x:String>Math</x:String>
+                        <x:String>Computer</x:String>
+                        <x:String>Science</x:String>
+                        <x:String>Art</x:String>
+                    </Picker.Items>
+                </Picker>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" BackgroundColor="LightGray" Padding="7">
+                <Label Text="Please Select a Gender." FontSize="20" FontAttributes="Bold" Padding="0, 10, 0, 0"></Label>
+                <Picker x:Name="pickerGender" Title="Select" TitleColor="White" HorizontalOptions="EndAndExpand" SelectedIndexChanged="picker_SelectedIndexChanged"
+                        TextColor="Red" FontAttributes="Bold" WidthRequest="100" HorizontalTextAlignment="Center">
+                    <Picker.Items>
+                        <x:String>Man</x:String>
+                        <x:String>Woman</x:String>
+                    </Picker.Items>
+                </Picker>
+            </StackLayout>
+
+            <StackLayout Orientation="Vertical">
+                <Label x:Name="lbGrade" Text="Grade : "></Label>
+                <Label x:Name="lbMajor" Text="Major : "></Label>
+                <Label x:Name="lbGender" Text="Gender : "></Label>
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

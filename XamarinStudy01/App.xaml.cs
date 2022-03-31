@@ -10,7 +10,7 @@ namespace XamarinStudy01
         {
             InitializeComponent();
 
-            MainPage = new ListviewViewCell();
+            MainPage = new ColorPicker();
             //MainPage = new NavigationPage(new MainPage()); // new MainPage();
 
         }
