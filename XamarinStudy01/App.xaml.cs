@@ -10,7 +10,7 @@ namespace XamarinStudy01
         {
             InitializeComponent();
 
-            MainPage = new ColorPicker();
+            MainPage = new SQLiteEx01();
             //MainPage = new NavigationPage(new MainPage()); // new MainPage();
 
         }

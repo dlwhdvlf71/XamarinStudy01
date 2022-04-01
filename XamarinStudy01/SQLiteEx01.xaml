@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinStudy01.SQLiteEx01"
+             Padding="20">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="To-Do List"
+                   TextColor="FloralWhite"
+                   BackgroundColor="DeepSkyBlue"
+                   Padding="10"
+                   HorizontalOptions="Fill"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   FontSize="30"
+               />
+
+            <StackLayout Margin="0, 20, 0, 0">
+                
+                <ListView x:Name="lvToDoList">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout>
+                                    <StackLayout>
+                                        <Label Text="202021302130" TextColor="LightSlateGray" FontSize="11"></Label>
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal" Spacing="0">
+                                        <Entry x:Name="entryMod" Placeholder="Please Input Data" WidthRequest="200"></Entry>
+                                        <StackLayout Orientation="Horizontal" HorizontalOptions="End">
+                                            <Button x:Name="btMod" Text="MOD" Clicked="btMod_Clicked" BackgroundColor="DarkGray" TextColor="Black" WidthRequest="60" HorizontalOptions="Center" VerticalOptions="Center"></Button>
+                                            <Button x:Name="btDel" Text="DEL" Clicked="btDel_Clicked" BackgroundColor="DarkGray" TextColor="Black" WidthRequest="60" HorizontalOptions="Center" VerticalOptions="Center"></Button>
+                                        </StackLayout>
+
+                                    </StackLayout>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                
+            </StackLayout>
+
+            <StackLayout BackgroundColor="LightSkyBlue" Padding="10">
+                <Label Text="New To-Do" TextColor="BlanchedAlmond" FontAttributes="Bold" FontSize="16"></Label>
+                <Entry Placeholder="Enter New To-Do." PlaceholderColor="Gray"></Entry>
+                <Button x:Name="btAddToDo" Text="SAVE NEW TO-DO." Clicked="btAddToDo_Clicked" BackgroundColor="OrangeRed" TextColor="White" BorderColor="Black" BorderWidth="1"></Button>
+            </StackLayout>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
