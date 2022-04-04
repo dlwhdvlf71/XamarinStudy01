@@ -15,18 +15,19 @@
                    FontSize="30"
                />
 
-            <StackLayout Margin="0, 20, 0, 0">
+            <StackLayout VerticalOptions="StartAndExpand">
                 
-                <ListView x:Name="lvToDoList">
+                <ListView x:Name="lvToDoList" HasUnevenRows="True">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
-                                <StackLayout>
-                                    <StackLayout>
-                                        <Label Text="202021302130" TextColor="LightSlateGray" FontSize="11"></Label>
+                                <StackLayout Orientation="Vertical"  Margin="0, 20, 0, 0" Spacing="0">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="{Binding TimeTodo}" TextColor="LightSlateGray" FontSize="11"></Label>
+                                        <Label Text="{Binding Id}" TextColor="LightSlateGray" FontSize="11"></Label>
                                     </StackLayout>
                                     <StackLayout Orientation="Horizontal" Spacing="0">
-                                        <Entry x:Name="entryMod" Placeholder="Please Input Data" WidthRequest="200"></Entry>
+                                        <Entry Text="{Binding Title}" Placeholder="Please Input Data" WidthRequest="200"></Entry>
                                         <StackLayout Orientation="Horizontal" HorizontalOptions="End">
                                             <Button x:Name="btMod" Text="MOD" Clicked="btMod_Clicked" BackgroundColor="DarkGray" TextColor="Black" WidthRequest="60" HorizontalOptions="Center" VerticalOptions="Center"></Button>
                                             <Button x:Name="btDel" Text="DEL" Clicked="btDel_Clicked" BackgroundColor="DarkGray" TextColor="Black" WidthRequest="60" HorizontalOptions="Center" VerticalOptions="Center"></Button>
@@ -43,7 +44,7 @@
 
             <StackLayout BackgroundColor="LightSkyBlue" Padding="10">
                 <Label Text="New To-Do" TextColor="BlanchedAlmond" FontAttributes="Bold" FontSize="16"></Label>
-                <Entry Placeholder="Enter New To-Do." PlaceholderColor="Gray"></Entry>
+                <Entry x:Name="entryTitle" Placeholder="Enter New To-Do." PlaceholderColor="Gray"></Entry>
                 <Button x:Name="btAddToDo" Text="SAVE NEW TO-DO." Clicked="btAddToDo_Clicked" BackgroundColor="OrangeRed" TextColor="White" BorderColor="Black" BorderWidth="1"></Button>
             </StackLayout>
             

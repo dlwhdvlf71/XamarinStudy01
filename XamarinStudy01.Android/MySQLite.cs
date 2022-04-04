@@ -21,7 +21,9 @@ namespace XamarinStudy01.Droid
         public SQLiteAsyncConnection GetConnection()
         {
             var documents = System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments);
-            var path = Path.Combine(documents, "MySQLite.db");           
+            var path = Path.Combine(documents, "MySQLite.db");
+
+            Console.WriteLine(documents, path);
 
             return new SQLiteAsyncConnection(path);
         }
