@@ -10,7 +10,7 @@ namespace XamarinStudy01
         {
             InitializeComponent();
 
-            MainPage = new SQLiteEx01();
+            MainPage = new DeviceDisplayEx();
             //MainPage = new NavigationPage(new MainPage()); // new MainPage();
 
         }
