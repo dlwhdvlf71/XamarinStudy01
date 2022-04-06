@@ -10,7 +10,7 @@ namespace XamarinStudy01
         {
             InitializeComponent();
 
-            MainPage = new DeviceDisplayEx();
+            MainPage = new TextToSpeachEx();
             //MainPage = new NavigationPage(new MainPage()); // new MainPage();
 
         }

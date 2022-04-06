@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinStudy01.TextToSpeachEx">
+    <ContentPage.Content>
+        <StackLayout>
+            <Button x:Name="btTextToSpeach" Text="Text To Speach" Clicked="btTextToSpeach_Clicked"></Button>
+
+            <Button x:Name="btTTSSetting" Text="TTS Setting" Clicked="btTTSSetting_Clicked"></Button>
+
+            <Label x:Name="lb01" Text="Xamarin.Essentials provides a single cross-platform API that works with any iOS, Android, or UWP application that can be accessed from shared code no matter how the user interface is created. See the platform feature support guide for more information on supported operating systems."></Label>
+            <Button x:Name="btLabel01TTS" Text="Label01 TTS" Clicked="btLabel01TTS_Clicked"></Button>
+
+            <Label x:Name="lb02" Text="Xamarin.Essentials supports a minimum Android version of 4.4, corresponding to API level 19, but the target Android version for compiling must be 9.0 or 10.0, corresponding to API level 28 and level 29. (In Visual Studio, these two versions are set in the Project Properties dialog for the Android project, in the Android Manifest tab. In Visual Studio for Mac, they're set in the Project Options dialog for the Android project, in the Android Application tab.)"></Label>
+            <Button x:Name="btLabel02TTS" Text="Label02 TTS" Clicked="btLabel02TTS_Clicked"></Button>
+            <Button x:Name="btCts" Text="TTS Cancel" Clicked="btCts_Clicked"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
