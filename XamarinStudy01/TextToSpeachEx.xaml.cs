@@ -13,7 +13,7 @@ namespace XamarinStudy01
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class TextToSpeachEx : ContentPage
     {
-        //public CancellationTokenSource cts;
+        public CancellationTokenSource cts;
 
         public TextToSpeachEx()
         {
