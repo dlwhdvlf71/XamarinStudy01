@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinStudy01.GeolocationEx">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="label01" />
+            <Button x:Name="btnLastKnownLocation" Text="LastKnownLocation" Clicked="btnLastKnownLocation_Clicked"></Button>
+
+            <Label x:Name="label02" />
+            <Button x:Name="btnLocation" Text="Location" Clicked="btnLocation_Clicked"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

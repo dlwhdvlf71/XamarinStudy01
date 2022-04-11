@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinStudy01.GeocodingEx"
+             Padding="20">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Label x:Name="label01"></Label>
+            <Button x:Name="btGeocoding" Text="Geocoding" Clicked="btGeocoding_Clicked"></Button>
+
+            <Label x:Name="label02"></Label>
+            <Button x:Name="btReverseGeocoding" Text="Reverse Geocoding" Clicked="btReverseGeocoding_Clicked"></Button>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

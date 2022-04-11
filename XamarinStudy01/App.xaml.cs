@@ -10,7 +10,7 @@ namespace XamarinStudy01
         {
             InitializeComponent();
 
-            MainPage = new TextToSpeachEx();
+            MainPage = new GeolocationEx();
             //MainPage = new NavigationPage(new MainPage()); // new MainPage();
 
         }
