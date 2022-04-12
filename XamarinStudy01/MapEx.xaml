@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinStudy01.MapEx"
+             Padding="20">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Location으로 찾기"/>
+            <Button x:Name="btnMapLocation" Text="MapLocation" Clicked="btnMapLocation_Clicked"></Button>
+
+            <Label Text="PlaceMark으로 찾기"/>
+            <Button x:Name="btnPlaceMark" Text="PlaceMark" Clicked="btnPlaceMark_Clicked"></Button>
+
+            <Label Text="길찾기모드로 찾기"/>
+            <Button x:Name="btnNavigation" Text="Navigation" Clicked="btnNavigation_Clicked"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

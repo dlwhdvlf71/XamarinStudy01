@@ -10,7 +10,7 @@ namespace XamarinStudy01
         {
             InitializeComponent();
 
-            MainPage = new GeolocationEx();
+            MainPage = new EmailEx();
             //MainPage = new NavigationPage(new MainPage()); // new MainPage();
 
         }

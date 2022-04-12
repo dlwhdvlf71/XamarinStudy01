@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinStudy01.EmailEx" Padding="20">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="MAIL"></Label>
+
+            <Entry x:Name="entrySubject" Placeholder="Enter Subject" Margin="0, 40, 0, 0"></Entry>
+            <Entry x:Name="entryBody" Placeholder="Enter Body" Margin="0, 10, 0, 0"></Entry>
+            <Entry x:Name="entryRecipient" Placeholder="Enter Recipient" Margin="0, 10, 0, 0"></Entry>
+            <Button x:Name="btnSend" Text="Send Mail" Clicked="btnSend_Clicked"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
