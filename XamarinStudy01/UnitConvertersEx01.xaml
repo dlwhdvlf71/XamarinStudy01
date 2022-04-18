@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinStudy01.UnitConvertersEx01"
+             Padding="20">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="CelsiusToFahrenheit" />
+            <Entry x:Name="entryCelsiusToFahrenheit"></Entry>
+            <Button x:Name="btnCelsiusToFahrenheit" Clicked="btnCelsiusToFahrenheit_Clicked" Text="CelsiusToFahrenheit"></Button>
+
+            <Label Text="CelsiusToKelvin" />
+            <Entry x:Name="entryCelsiusToKelvin"></Entry>
+            <Button x:Name="btnCelsiusToKelvin" Clicked="btnCelsiusToKelvin_Clicked" Text="CelsiusToKelvin"></Button>
+
+            <Label Text="MilesToMeters" />
+            <Entry x:Name="entryMilesToMeters"></Entry>
+            <Button x:Name="btnMilesToMeters" Clicked="btnMilesToMeters_Clicked" Text="MilesToMeters"></Button>
+
+            <Label Text="MilesToKilometers" />
+            <Entry x:Name="entryMilesToKilometers"></Entry>
+            <Button x:Name="btnMilesToKilometers" Clicked="btnMilesToKilometers_Clicked" Text="MilesToKilometers"></Button>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

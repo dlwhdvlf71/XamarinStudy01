@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinStudy01.PhoneDialerEx01"
+             Padding="20">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="labelTitle" Text="Phone Dialer"/>
+            <Entry x:Name="entryPhoneDialer" Placeholder="Input Phone Number"></Entry>
+            <Button x:Name="btnPhoneDialer" Text="PhoneDialer" Clicked="btnPhoneDialer_Clicked"></Button>
+
+            <Label Text="Emergency Call" Margin="0, 20, 0, 0"/>
+
+            <Button x:Name="btn111" Text="국가정보원(111)" Clicked="btnPhoneDialer_Clicked"></Button>
+            <Button x:Name="btn112" Text="경찰(112)" Clicked="btnPhoneDialer_Clicked"></Button>
+            <Button x:Name="btn119" Text="소방(119)" Clicked="btnPhoneDialer_Clicked"></Button>
+            <Button x:Name="btn120" Text="다산콜센터(120)" Clicked="btnPhoneDialer_Clicked"></Button>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
