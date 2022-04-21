@@ -10,7 +10,7 @@ namespace XamarinStudy01
         {
             InitializeComponent();
 
-            MainPage = new ClipBoardEx01();
+            MainPage = new SQLiteEx02();
             //MainPage = new NavigationPage(new MainPage()); // new MainPage();
 
         }
