@@ -9,6 +9,7 @@ using Xamarin.Forms.Xaml;
 using SQLite;
 using Xamarin.Essentials;
 using XamarinStudy01.Class;
+using System.Collections.ObjectModel;
 
 namespace XamarinStudy01
 {
@@ -30,23 +31,40 @@ namespace XamarinStudy01
          * */
 
         SQLiteConnection connection;
+        SQLiteAsyncConnection asyncConnection;
 
         public SQLiteEx02()
         {
             InitializeComponent();
 
             connection = new SQLiteConnection(libFolder + "SQLite");
+            asyncConnection = new SQLiteAsyncConnection(libFolder + "SQLite");
 
-            userListView.ItemsSource = connection.Table<User>();
-
+       
         }
 
-        private void Read()
+        protected override async void OnAppearing()
         {
-            userListView.ItemsSource = connection.Table<User>();
+            await Read();
+
+            base.OnAppearing();
         }
 
-        private void buttonInsert_Clicked(object sender, EventArgs e)
+        private async Task<List<User>> Read()
+        {
+            //userListView.ItemsSource = connection.Table<User>();
+
+            //Task<List<User>> users = await asyncConnection.Table<User>().ToListAsync();
+            await asyncConnection.CreateTableAsync<User>();
+
+            var users = await asyncConnection.Table<User>().ToListAsync();
+
+            userListView.ItemsSource = new ObservableCollection<User>(users);
+
+            return users;
+        }
+
+        private async void buttonInsert_Clicked(object sender, EventArgs e)
         {
             connection.CreateTable<User>();
 
@@ -57,14 +75,16 @@ namespace XamarinStudy01
                 UserName = name
             };
 
-            connection.Insert(newUser);
+            await asyncConnection.InsertAsync(newUser);
 
-            Read();
+            //connection.Insert(newUser);
 
-            DisplayAlert("Message", "insert your name", "confirm");
+            //await Read();
+            OnAppearing();
+
         }
 
-        private void Button_Clicked(object sender, EventArgs e)
+        private async void btnModify_Clicked(object sender, EventArgs e)
         {
             try
             {
@@ -72,9 +92,31 @@ namespace XamarinStudy01
 
                 User user = (User)button.BindingContext;
 
-                connection.Update(user);
+                await asyncConnection.UpdateAsync(user);
+                //connection.Update(user);
 
-                Read();
+                await Read();
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        private async void btnDelete_Clicked(object sender, EventArgs e)
+        {
+            try
+            {
+                Button button = (Button)sender;
+
+                User user = (User)button.BindingContext;
+
+                await asyncConnection.DeleteAsync(user);
+                //connection.Update(user);
+
+                OnAppearing();
 
             }
             catch (Exception)

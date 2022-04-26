@@ -16,8 +16,9 @@
                             <StackLayout Orientation="Vertical">
                                 <StackLayout Orientation="Horizontal">
                                     <Label Text="{Binding Id}"></Label>
-                                    <Entry Text="{Binding UserName}"></Entry>
-                                    <Button Text="Modify" Clicked="Button_Clicked"></Button>
+                                    <Entry Text="{Binding UserName}" WidthRequest="100"></Entry>
+                                    <Button x:Name="btnModify" Text="Modify" Clicked="btnModify_Clicked"></Button>
+                                    <Button x:Name="btnDelete" Text="Delete" Clicked="btnDelete_Clicked"></Button>
                                 </StackLayout>
                             </StackLayout>
                         </ViewCell>
