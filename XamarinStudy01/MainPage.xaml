@@ -8,7 +8,7 @@
     </NavigationPage.TitleView>
     <StackLayout BackgroundColor="White" Margin="20">
         <Label Text="Main Page" HorizontalOptions="CenterAndExpand" Padding="20" BackgroundColor="LightGray"></Label>
-
+        <Entry x:Name="entryInput" Placeholder="Enter Data" Completed="entryInput_Completed"></Entry>
         <Button x:Name="btGoToSecond" Text="Go to Second Page" VerticalOptions="EndAndExpand" Margin="20" Clicked="btGoToSecond_Clicked"></Button>
         
     </StackLayout>

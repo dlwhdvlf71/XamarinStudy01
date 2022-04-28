@@ -15,6 +15,13 @@ namespace XamarinStudy01
             InitializeComponent();
         }
 
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+
+            entryInput.Text = (Application.Current as App).DisplayText;
+        }
+
         private async void btGoToSecond_Clicked(object sender, EventArgs e)
         {
             try
@@ -26,6 +33,13 @@ namespace XamarinStudy01
 
                 throw;
             }
+        }
+
+        private void entryInput_Completed(object sender, EventArgs e)
+        {
+            (Application.Current as App).DisplayText = entryInput.Text;
+
+            Console.WriteLine("entryInput_Completed");
         }
     }
 }
