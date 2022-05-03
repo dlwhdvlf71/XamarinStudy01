@@ -14,7 +14,7 @@ namespace XamarinStudy01
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new CarouselViewEx01();
             //MainPage = new NavigationPage(new MainPage()); // new MainPage();
 
         }

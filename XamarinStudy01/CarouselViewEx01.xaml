@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinStudy01.CarouselViewEx01"
+             Padding="20">
+    <ContentPage.Content>
+
+        <CarouselView x:Name="cvUsers" Loop="False" PeekAreaInsets="50" CurrentItemChanged="cvUsers_CurrentItemChanged">
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <Frame HasShadow="True" Margin="20" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" WidthRequest="300">
+                            <StackLayout>
+                                <Label Text="{Binding Id}" HorizontalOptions="Center"></Label>
+                                <Label Text="{Binding UserName}" HorizontalOptions="Center"></Label>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+        
+    </ContentPage.Content>
+</ContentPage>
