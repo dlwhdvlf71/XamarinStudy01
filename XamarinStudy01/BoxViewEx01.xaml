@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinStudy01.BoxViewEx01"
+             Padding="20">
+    <ContentPage.Content>
+        <BoxView Color="SkyBlue" CornerRadius="10" WidthRequest="100" HeightRequest="100" VerticalOptions="Center" HorizontalOptions="Center">
+            <BoxView.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped">
+                    
+                </TapGestureRecognizer>
+            </BoxView.GestureRecognizers>
+        </BoxView>
+    </ContentPage.Content>
+</ContentPage>

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
@@ -27,13 +28,19 @@ namespace XamarinStudy01
 
             cvUsers.ItemsSource = users;
 
+            //cvUsers.Position = 2;
 
+            //Thread.Sleep(5000);
+
+            
         }
 
         private void cvUsers_CurrentItemChanged(object sender, CurrentItemChangedEventArgs e)
         {
             Console.WriteLine((e.CurrentItem as User).Id);
             //Console.WriteLine((e.PreviousItem as User).Id);
+
+            cvUsers.ScrollTo(1);
         }
     }
 }
