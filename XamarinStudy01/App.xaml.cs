@@ -14,9 +14,8 @@ namespace XamarinStudy01
         {
             InitializeComponent();
 
-            MainPage = new BoxViewEx01();
+            MainPage = new OptionSettingPage();
             //MainPage = new NavigationPage(new MainPage()); // new MainPage();
-
         }
 
         /// <summary>

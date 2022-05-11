@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinStudy01.OptionSettingPage"
+             Padding="20, 0 ,20, 0">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Start">
+            <Label Text="Setting" VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand" />
+
+            <Frame BorderColor="Red">
+                <StackLayout Orientation="Horizontal">
+                    <StackLayout Orientation="Vertical">
+                        <Label>준비</Label>
+                        <Label>시작하기 전 카운트다운</Label>
+                    </StackLayout>
+                    <Label HorizontalOptions="EndAndExpand" VerticalOptions="Center" FontSize="30">10</Label>
+                    <Line Stroke="Red" X1="10" X2="200"></Line>
+                </StackLayout>
+            </Frame>
+            
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>
